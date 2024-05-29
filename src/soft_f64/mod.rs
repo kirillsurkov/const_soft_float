@@ -10,6 +10,7 @@ pub mod floor;
 pub mod log;
 pub mod mul;
 pub mod pow;
+pub mod powf;
 pub mod round;
 pub mod sin;
 pub mod sqrt;
@@ -121,6 +122,10 @@ impl SoftF64 {
 
     pub const fn ln(self) -> Self {
         log::log(self)
+    }
+
+    pub const fn powf(self, exponent: Self) -> Self {
+        powf::powf(self, exponent)
     }
 }
 
